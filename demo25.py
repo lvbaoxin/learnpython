@@ -26,5 +26,5 @@ class Teacher(Person):
 
 stu = Student("张二", 20, 1000)
 teacher = Teacher("张强", 30, 10)
-stu.info()  # 张二 20
-teacher.info()
+stu.info()  # 张二 20 1000
+teacher.info()#张强 30  10

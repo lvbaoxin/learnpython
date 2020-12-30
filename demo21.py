@@ -5,6 +5,7 @@ class Student:  # Student为类的名称，由一个或多个单词组成，每�
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
     # 实例方法
     # 在类之外称为函数，在类之内称为方法。
 
@@ -19,7 +20,8 @@ class Student:  # Student为类的名称，由一个或多个单词组成，每�
     def cm(cls):
         print("类方法，使用classmethod进行修饰")
 
-print(Student.native_pace) #吉林
 
-Student.cm() #类方法
-Student.mothed() #静态方法
+print(Student.native_pace)  # 吉林
+
+Student.cm()  # 类方法
+Student.mothed()  # 静态方法

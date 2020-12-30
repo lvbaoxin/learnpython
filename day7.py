@@ -1,4 +1,4 @@
-#for else 适用于for执行完或者没有循环数据时，需要做的事情。
+# for else 适用于for执行完或者没有循环数据时，需要做的事情。
 # num = int(input("请输入数量"))
 # name = "张三"
 # for i in range(num):

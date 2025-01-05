@@ -45,6 +45,33 @@ def insert_db():
     db.close()
 
 
+def data_search():
+    db = pymysql.connect(host='localhost', user='root', password='745458741', database='pythontest', charset='utf8')
+    cursor = db.cursor()
+    sql = "select * from student where class = %s " % (1)
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for row in result:
+        name = row[1]
+        age = row[2]
+        print('姓名是{}，年龄是{}'.format(name, age))
+    db.close()
+
+
+def data_update():
+    db = pymysql.connect(host='localhost', user='root', password='745458741', database='pythontest', charset='utf8')
+    cursor = db.cursor()
+    sql = "update student set class = %s where name = '%s'" % (3, 'zhangsan')
+    cursor.execute(sql)
+    db.commit()
+    db.close()
+def data_delete():
+    db = pymysql.connect(host='localhost', user='root', password='745458741', database='pythontest', charset='utf8')
+    cursor = db.cursor()
+    sql = "delete from student where name = '%s'" % ('wangwu')
+    cursor.execute(sql)
+    db.commit()
+    db.close()
 
 if __name__ == '__main__':
-    insert_db()
+    data_delete()
